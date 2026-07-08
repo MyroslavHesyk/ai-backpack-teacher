@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI-рюкзак вчителя — ШІ на допомогу вчителю</title>
+  <meta name="description" content="Інтерактивний міні-сайт для вчителів України: ChatGPT, Gemini, промпти, AI-контент, уроки, оцінювання, сертифікат і бонусний курс." />
+  <meta name="theme-color" content="#6757ff" />
+  <meta property="og:title" content="AI-рюкзак вчителя — ШІ на допомогу вчителю" />
+  <meta property="og:description" content="Інтерактивний майстер-клас для педагогів: ChatGPT, Gemini, промпти, AI-контент, уроки, сертифікат і бонусний курс." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:site_name" content="AI-рюкзак вчителя" />
+  <meta property="og:image" content="https://myroslavhesyk.github.io/ai-backpack-teacher/assets/placeholder.png" />
+  <meta property="og:image:alt" content="Штучний інтелект на допомогу вчителю — майстер-клас для педагогів" />
+  <meta property="og:image:type" content="image/png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI-рюкзак вчителя — ШІ на допомогу вчителю" />
+  <meta name="twitter:description" content="Практична AI-мандрівка для вчителя: промпти, уроки, візуали, сертифікат і бонусний курс." />
+  <meta name="twitter:image" content="https://myroslavhesyk.github.io/ai-backpack-teacher/assets/placeholder.png" />
+  <link rel="image_src" href="./assets/placeholder.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb orb-one" aria-hidden="true"></div>
+  <div class="bg-orb orb-two" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a href="#top" class="brand" aria-label="AI-рюкзак вчителя">
+      <span class="brand-mark">AI</span>
+      <span>
+        <strong>AI-рюкзак вчителя</strong>
+        <small>Освітні горизонти 2026</small>
+      </span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mainNav">
+      <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <nav class="nav" id="mainNav">
+      <a href="#start">Старт</a>
+      <a href="#stations">Станції</a>
+      <a href="#tools">AI-сервіси</a>
+      <a href="#final">Фінал</a>
+      <a href="#about">Про автора</a>
+      <button class="ghost-btn small" id="resetBtn" type="button">Скинути прогрес</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="start">
+      <div class="hero-content">
+        <div class="eyebrow">ХІІ Всеукраїнська літня школа · Лумшори · 11–16 липня 2026</div>
+        <h1>Зберіть власний <span>AI-рюкзак</span> для уроків</h1>
+        <p class="lead">
+          Сьогодні ми не просто говоримо про штучний інтелект. Ми вчимося ставити йому правильні завдання,
+          перевіряти відповіді, допрацьовувати матеріали й створювати корисний AI-контент для реального уроку.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#registration">Почати мандрівку</a>
+          
+        </div>
+        <div class="hero-badges" aria-label="Ключові переваги">
+          <span>✅ ChatGPT + Gemini</span>
+          <span>🎨 AI-контент</span>
+          <span>🎁 Сертифікат і бонус</span>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Прогрес AI-рюкзака">
+        <div class="backpack-visual">
+          <div class="backpack-face">🎒</div>
+          <div class="spark spark-a">✦</div>
+          <div class="spark spark-b">✧</div>
+          <div class="spark spark-c">✦</div>
+        </div>
+        <h2>Ваш AI-рюкзак</h2>
+        <p>Пройдіть 12 станцій і відкрийте сертифікат, завдання для соцмереж та бонусний курс.</p>
+        <div class="progress-shell" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <strong id="progressText">0/12 станцій пройдено</strong>
+        
+      </aside>
+    </section>
+
+    <section class="section registration-card" id="registration">
+      <div class="section-heading compact">
+        <span class="section-kicker">Крок 0</span>
+        <h2>Відкрийте свій AI-рюкзак</h2>
+        <p>Заповніть короткий профіль. Він потрібен для персоналізації промптів і сертифіката.</p>
+      </div>
+      <form class="profile-form" id="profileForm">
+        <label>
+          Ім’я та прізвище
+          <input type="text" name="name" placeholder="Наприклад: Оксана Коваль" required />
+        </label>
+        <label>
+          Предмет
+          <input type="text" name="subject" placeholder="Наприклад: українська мова, математика, історія" required />
+        </label>
+        <label>
+          Клас / вікова група
+          <input type="text" name="grade" placeholder="Наприклад: 7 клас" required />
+        </label>
+        <label>
+          Рівень знайомства з AI
+          <select name="aiLevel" required>
+            <option value="Починаю знайомство">Починаю знайомство</option>
+            <option value="Трохи користуюсь">Трохи користуюсь</option>
+            <option value="Активно використовую">Активно використовую</option>
+          </select>
+        </label>
+        <button class="primary-btn" type="submit">Зберегти профіль</button>
+      </form>
+      <p class="status-line" id="profileStatus">Профіль ще не заповнено.</p>
+    </section>
+
+    <section class="section intro-strip" id="why-ai">
+      <div>
+        <span class="section-kicker">Навіщо це вчителю</span>
+        <h2>AI — це не чарівна кнопка. Це розумний чернеткар.</h2>
+      </div>
+      <div class="value-grid">
+        <div><strong>Економить час</strong><span>План, тести, пояснення, листи, завдання.</span></div>
+        <div><strong>Дає варіанти</strong><span>Не одна ідея, а 5–10 підходів до теми.</span></div>
+        <div><strong>Підлаштовує матеріал</strong><span>Для сильних, середніх і тих, кому потрібна підтримка.</span></div>
+        <div><strong>Потребує вчителя</strong><span>AI помиляється. Учитель перевіряє, адаптує і несе відповідальність.</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="stations">
+      <div class="section-heading">
+        <span class="section-kicker">12 станцій</span>
+        <h2>Мандрівка: від першого промпту до готового AI-пакета уроку</h2>
+        <p>На кожній станції є коротке пояснення, приклад і дія. Після опрацювання натисніть “Зарахувати станцію”.</p>
+      </div>
+
+      <div class="station-grid">
+        <article class="station-card" data-station="1">
+          <div class="station-top"><span class="station-number">01</span><span class="station-icon">🧭</span></div>
+          <h3>AI не замінює вчителя</h3>
+          <p>ШІ не знає ваш клас так, як ви. Він не бачить емоцій, не відчуває темпу групи й не відповідає за результат навчання. Його сила — швидко створити чернетку.</p>
+          <div class="teacher-formula">
+            <strong>Правильна формула:</strong>
+            <span>AI пропонує → вчитель перевіряє → вчитель адаптує → учень навчається.</span>
+          </div>
+          <p class="micro-title">З чим AI може допомогти саме вам?</p>
+          <div class="choice-list" data-choice-group="needs">
+            <button type="button" data-value="План уроку">План уроку</button>
+            <button type="button" data-value="Тести">Тести</button>
+            <button type="button" data-value="Диференціація">Диференціація</button>
+            <button type="button" data-value="Презентації">Презентації</button>
+            <button type="button" data-value="Комунікація">Комунікація</button>
+            <button type="button" data-value="AI-зображення">AI-зображення</button>
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+
+        <article class="station-card" data-station="2">
+          <div class="station-top"><span class="station-number">02</span><span class="station-icon">🤖</span></div>
+          <h3>ChatGPT і Gemini: з чого почати</h3>
+          <p><strong>ChatGPT</strong> зручно використовувати для промптів, планів уроків, пояснень, текстів, сценаріїв, генерації та редагування зображень.</p>
+          <p><strong>Gemini</strong> зручно використовувати для швидких ідей, роботи з Google-екосистемою, аналізу великих текстів, узагальнень і генерації зображень.</p>
+          <div class="compare-box">
+            <div><strong>Коли ChatGPT?</strong><span>коли потрібна структура, покроковість, сценарій уроку, стиль тексту.</span></div>
+            <div><strong>Коли Gemini?</strong><span>коли треба швидко обробити джерело, порівняти варіанти, зробити ідеї.</span></div>
+          </div>
+          <div class="quick-links">
+            <a href="https://chatgpt.com/" target="_blank" rel="noopener">Відкрити ChatGPT</a>
+            <a href="https://gemini.google.com/" target="_blank" rel="noopener">Відкрити Gemini</a>
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+
+        <article class="station-card wide" data-station="3">
+          <div class="station-top"><span class="station-number">03</span><span class="station-icon">🧠</span></div>
+          <h3>Анатомія сильного промпту</h3>
+          <p>Поганий промпт звучить так: “зроби урок”. Сильний промпт пояснює роль AI, контекст, клас, мету, формат відповіді, обмеження і критерії якості.</p>
+          <div class="prompt-rules-grid">
+            <div><b>1. Роль</b><span>“Ти — помічник учителя історії”.</span></div>
+            <div><b>2. Контекст</b><span>клас, тема, рівень учнів, тривалість.</span></div>
+            <div><b>3. Завдання</b><span>план, тест, пояснення, постер, активність.</span></div>
+            <div><b>4. Обмеження</b><span>45 хв, українською, без складних термінів.</span></div>
+            <div><b>5. Формат</b><span>таблиця, список, структура уроку, чекліст.</span></div>
+            <div><b>6. Критерії</b><span>цікаво, практично, з прикладами, придатно для уроку.</span></div>
+          </div>
+          <div class="note">
+            <strong>Головне правило:</strong> що точніше ви описуєте задачу, то менше часу витрачаєте на переробку відповіді.
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+
+        <article class="station-card wide" id="prompt-builder" data-station="4">
+          <div class="station-top"><span class="station-number">04</span><span class="station-icon">🧩</span></div>
+          <h3>Промпт-конструктор</h3>
+          <p>Заповніть поля — сайт збере детальний промпт, який можна одразу вставити в ChatGPT або Gemini.</p>
+          <div class="prompt-builder">
+            <label>Тема уроку<input id="topicInput" type="text" placeholder="Наприклад: Дієприкметник" /></label>
+            <label>Мета<input id="goalInput" type="text" placeholder="Пояснити тему й потренувати застосування" /></label>
+            <label>Формат
+              <select id="formatInput">
+                <option>повний план уроку</option>
+                <option>тест</option>
+                <option>групова активність</option>
+                <option>домашнє завдання</option>
+                <option>презентація</option>
+                <option>AI-зображення або постер</option>
+              </select>
+            </label>
+            <label>Особлива умова<input id="conditionInput" type="text" placeholder="Наприклад: слабший клас, мало часу, НУШ" /></label>
+          </div>
+          <div class="prompt-box">
+            <div class="prompt-label">Готовий промпт</div>
+            <pre id="generatedPrompt"></pre>
+            <div class="prompt-actions">
+              <button class="copy-btn" type="button" data-copy-target="generatedPrompt">Скопіювати промпт</button>
+              <a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a>
+              <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a>
+            </div>
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+
+        <article class="station-card" data-station="5">
+          <div class="station-top"><span class="station-number">05</span><span class="station-icon">🔁</span></div>
+          <h3>Не зупиняйтесь на першій відповіді</h3>
+          <p>Перша відповідь AI — це чернетка. Далі треба ставити уточнювальні запитання. Саме тут починається справжня робота з AI.</p>
+          <div class="prompt-box small-box">
+            <div class="prompt-label">Уточнювальні команди</div>
+            <pre id="followUpPrompt">Зроби простіше для 6 класу.
+Додай більше практичних прикладів.
+Скороти до 10 хвилин пояснення.
+Перероби завдання у формат роботи в парах.
+Додай критерії оцінювання.
+Запропонуй 3 варіанти, а я оберу найкращий.</pre>
+            <div class="prompt-actions"><button class="copy-btn" type="button" data-copy-target="followUpPrompt">Скопіювати</button></div>
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+
+        <article class="station-card" data-station="6">
+          <div class="station-top"><span class="station-number">06</span><span class="station-icon">📚</span></div>
+          <h3>AI-план уроку за 5 хвилин</h3>
+          <p>Попросіть AI не “зробити урок”, а створити структуру з часом, активностями, запитаннями, домашнім завданням і рефлексією.</p>
+          <div class="mini-result">
+            <span>5 хв — мотивація</span><span>10 хв — пояснення</span><span>15 хв — практика</span><span>7 хв — робота в парах</span><span>5 хв — перевірка</span><span>3 хв — рефлексія</span>
+          </div>
+          <div class="prompt-box small-box">
+            <div class="prompt-label">Приклад</div>
+            <pre id="lessonPrompt">Створи план уроку на 45 хвилин для [клас] з теми “[тема]”. Додай мотивацію, пояснення простими словами, практику, роботу в парах, коротке оцінювання, рефлексію і домашнє завдання.</pre>
+            <div class="prompt-actions"><button class="copy-btn" type="button" data-copy-target="lessonPrompt">Скопіювати</button></div>
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+
+        <article class="station-card" data-station="7">
+          <div class="station-top"><span class="station-number">07</span><span class="station-icon">🎚️</span></div>
+          <h3>Один матеріал — три рівні</h3>
+          <p>AI допомагає швидко адаптувати матеріал для різного рівня учнів: базовий, стандартний і з викликом.</p>
+          <div class="prompt-box small-box">
+            <div class="prompt-label">Диференціація</div>
+            <pre id="diffPrompt">Адаптуй цей навчальний текст для трьох рівнів учнів:
+1. базовий — простими словами і короткими реченнями;
+2. середній — стандартне пояснення для класу;
+3. високий — складніше пояснення з додатковим викликом.
+Після кожної версії додай 3 запитання.</pre>
+            <div class="prompt-actions"><button class="copy-btn" type="button" data-copy-target="diffPrompt">Скопіювати</button></div>
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+
+        <article class="station-card" data-station="8">
+          <div class="station-top"><span class="station-number">08</span><span class="station-icon">📝</span></div>
+          <h3>Тести, завдання, рубрики</h3>
+          <p>AI може створити варіанти тестів, відкриті запитання, завдання на відповідність, критерії оцінювання і рубрики.</p>
+          <div class="prompt-box small-box">
+            <div class="prompt-label">Тест + пояснення</div>
+            <pre id="testPrompt">Створи тест із 10 запитань для [клас] з теми “[тема]”.
+Формат: 6 запитань з вибором відповіді, 2 на відповідність, 2 відкриті.
+Після кожного запитання вкажи правильну відповідь і коротке пояснення для вчителя.</pre>
+            <div class="prompt-actions"><button class="copy-btn" type="button" data-copy-target="testPrompt">Скопіювати</button></div>
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+
+        <article class="station-card" data-station="9">
+          <div class="station-top"><span class="station-number">09</span><span class="station-icon">🎨</span></div>
+          <h3>Генерація зображень для уроку</h3>
+          <p>Для картинки треба описати не лише “що намалювати”, а й стиль, композицію, формат, настрій, кольори, текст і обмеження.</p>
+          <ul class="rules-list compact-list">
+            <li><strong>Об’єкт:</strong> хто або що в кадрі.</li>
+            <li><strong>Сцена:</strong> де це відбувається.</li>
+            <li><strong>Стиль:</strong> фото, ілюстрація, плакат, 3D, акварель.</li>
+            <li><strong>Формат:</strong> 16:9, 1:1, A4, вертикальний постер.</li>
+            <li><strong>Текст:</strong> краще короткий, великий, без дрібних написів.</li>
+            <li><strong>Уточнення:</strong> що не змінювати, чого не додавати.</li>
+          </ul>
+          <div class="limit-note">
+            <strong>Про безкоштовні ліміти:</strong> у ChatGPT і Gemini вони динамічні та залежать від плану, моделі й навантаження. Для практики з групою плануйте 1–2 якісні спроби на учасника, а не десятки генерацій.
+          </div>
+          <div class="prompt-box small-box">
+            <div class="prompt-label">Завдання для учасників</div>
+            <pre id="imagePrompt">Згенеруй горизонтальне зображення 16:9 для літньої школи “Освітні горизонти 2026” у Лумшорах.
+Тема: “Штучний інтелект на допомогу вчителю”.
+Стиль: сучасний освітній постер, світлі кольори, гори Закарпаття, вчителі з телефонами/ноутбуками, дружня атмосфера.
+Додай великий читабельний текст: AI-рюкзак вчителя.
+Без зайвих дрібних написів, без спотворених облич, якість висока.</pre>
+            <div class="prompt-actions"><button class="copy-btn" type="button" data-copy-target="imagePrompt">Скопіювати завдання</button></div>
+          </div>
+          <div class="task-card">
+            <strong>Практика:</strong> згенеруйте таке зображення в ChatGPT або Gemini, збережіть його і покажіть Мирославу під час заняття.
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+
+        <article class="station-card" data-station="10">
+          <div class="station-top"><span class="station-number">10</span><span class="station-icon">🖼️</span></div>
+          <h3>Презентації, картки, плакати</h3>
+          <p>AI може підготувати структуру презентації, а Canva або інший редактор допоможе швидко оформити матеріал.</p>
+          <div class="prompt-box small-box">
+            <div class="prompt-label">Презентація</div>
+            <pre id="visualPrompt">Створи структуру презентації на 7 слайдів для уроку з теми “[тема]”. Для кожного слайда дай: заголовок, 2–3 речення тексту, ідею для зображення, запитання до учнів і коротку активність.</pre>
+            <div class="prompt-actions"><button class="copy-btn" type="button" data-copy-target="visualPrompt">Скопіювати</button></div>
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+
+        <article class="station-card" data-station="11">
+          <div class="station-top"><span class="station-number">11</span><span class="station-icon">💬</span></div>
+          <h3>Комунікація з батьками й учнями</h3>
+          <p>AI добре працює як редактор тону: скоротити, зробити м’якше, офіційніше, доброзичливіше або простіше.</p>
+          <div class="tone-demo">
+            <button type="button" data-tone="short">До Viber</button>
+            <button type="button" data-tone="soft">М’якше</button>
+            <button type="button" data-tone="official">Офіційніше</button>
+          </div>
+          <p class="message-preview" id="messagePreview">Оберіть тон повідомлення.</p>
+          <div class="prompt-box small-box">
+            <div class="prompt-label">Промпт для повідомлення</div>
+            <pre id="messagePrompt">Напиши ввічливе повідомлення для батьків учнів [клас] класу.
+Тема: [тема повідомлення].
+Тон: спокійний, доброзичливий, професійний.
+Повідомлення має бути коротким і зрозумілим.</pre>
+            <div class="prompt-actions"><button class="copy-btn" type="button" data-copy-target="messagePrompt">Скопіювати</button></div>
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+
+        <article class="station-card" data-station="12">
+          <div class="station-top"><span class="station-number">12</span><span class="station-icon">🛡️</span></div>
+          <h3>Чесне й безпечне використання AI</h3>
+          <p>Учням потрібно не просто “заборонити AI”, а навчити користуватися ним відповідально.</p>
+          <ul class="rules-list">
+            <li>Не вводимо персональні дані учнів у AI-сервіси.</li>
+            <li>Не здаємо AI-текст як власну роботу без розуміння.</li>
+            <li>Перевіряємо факти, джерела, дати, формули й цитати.</li>
+            <li>Пояснюємо учням: AI — це помічник, а не автор замість людини.</li>
+            <li>Фінальне педагогічне рішення — за вчителем.</li>
+          </ul>
+          <div class="prompt-box small-box">
+            <div class="prompt-label">Правила для класу</div>
+            <pre id="ethicsPrompt">Створи прості правила використання AI для учнів [клас] класу: що дозволено, що заборонено, як вказувати допомогу AI і як перевіряти відповідь.</pre>
+            <div class="prompt-actions"><button class="copy-btn" type="button" data-copy-target="ethicsPrompt">Скопіювати</button></div>
+          </div>
+          <button class="complete-btn" type="button">Зарахувати станцію</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tools-section" id="tools">
+      <div class="section-heading">
+        <span class="section-kicker">AI-сервіси</span>
+        <h2>Добірка простих інструментів для вчителя</h2>
+        <p>Умови безкоштовного доступу змінюються. Перед заняттям краще перевірити, що саме працює у вашому акаунті.</p>
+      </div>
+      <div class="tools-grid">
+        <a class="tool-card featured" href="https://chatgpt.com/" target="_blank" rel="noopener"><strong>ChatGPT</strong><span>Промпти, плани уроків, пояснення, тексти, зображення, ідеї для контенту.</span></a>
+        <a class="tool-card featured" href="https://gemini.google.com/" target="_blank" rel="noopener"><strong>Gemini</strong><span>Швидкі ідеї, узагальнення, робота з Google-екосистемою, генерація зображень.</span></a>
+        <a class="tool-card" href="https://www.canva.com/education/" target="_blank" rel="noopener"><strong>Canva for Education</strong><span>Презентації, плакати, картки, worksheets.</span></a>
+        <a class="tool-card" href="https://notebooklm.google.com/" target="_blank" rel="noopener"><strong>NotebookLM</strong><span>Конспекти, запитання й study guide на основі ваших джерел.</span></a>
+        <a class="tool-card" href="https://copilot.microsoft.com/" target="_blank" rel="noopener"><strong>Copilot</strong><span>Помічник для текстів, пошуку й структурування.</span></a>
+        <a class="tool-card" href="https://web.diffit.me/" target="_blank" rel="noopener"><strong>Diffit</strong><span>Адаптація матеріалів під рівні учнів.</span></a>
+        <a class="tool-card" href="https://www.magicschool.ai/" target="_blank" rel="noopener"><strong>MagicSchool</strong><span>AI-інструменти для планів, завдань і оцінювання.</span></a>
+        <a class="tool-card" href="https://www.eduaide.ai/" target="_blank" rel="noopener"><strong>Eduaide.AI</strong><span>Завдання, плани, активності, оцінювання.</span></a>
+        <a class="tool-card" href="https://questionwell.org/" target="_blank" rel="noopener"><strong>QuestionWell</strong><span>Запитання, тести, інтерактивні активності.</span></a>
+        <a class="tool-card" href="https://twee.com/" target="_blank" rel="noopener"><strong>Twee</strong><span>Особливо корисно для вчителів англійської.</span></a>
+      </div>
+    </section>
+
+    <section class="section final-section" id="final">
+      <div class="final-card">
+        <div>
+          <span class="section-kicker">Фінал</span>
+          <h2>Зберіть фінальний AI-пакет уроку</h2>
+          <p>Після проходження станцій відкриється сертифікат і кнопка з бонусним курсом.</p>
+        </div>
+        <div class="final-actions">
+          <button class="primary-btn" id="makeFinalPromptBtn" type="button">Створити фінальний промпт</button>
+          <button class="secondary-btn" id="certificateBtn" type="button" disabled>Сертифікат відкриється після 12 станцій</button>
+        </div>
+        <div class="prompt-box final-prompt hidden" id="finalPromptWrap">
+          <div class="prompt-label">Фінальний AI-пакет</div>
+          <pre id="finalPrompt"></pre>
+          <div class="prompt-actions"><button class="copy-btn" type="button" data-copy-target="finalPrompt">Скопіювати фінальний промпт</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section social-challenge" id="challenge">
+      <div class="section-heading compact">
+        <span class="section-kicker">Соцмережевий челендж</span>
+        <h2>Пост у Facebook або Instagram для участі в розіграші</h2>
+        <p>Ідея для учасників: опублікувати фото, карусель або AI-зображення з літньої школи, написати короткий інсайт і додати хештеги.</p>
+      </div>
+      <div class="challenge-layout">
+        <div class="challenge-card">
+          <h3>Завдання для учасника</h3>
+          <ol>
+            <li>Зробіть фото з заняття або згенеруйте AI-зображення “AI-рюкзак вчителя”.</li>
+            <li>Напишіть 3–5 речень: що нового дізналися і що спробуєте на уроці.</li>
+            <li>Опублікуйте у Facebook або Instagram.</li>
+            <li>Додайте хештеги: <strong>#ОсвітніГоризонти2026 #ІМЗО #Астро</strong>.</li>
+            <li>Зареєструйте допис на сайті літньої школи для участі в розіграші.</li>
+          </ol>
+          <a class="primary-btn" href="https://myroslavhesyk.github.io/osvitni-horyzonty/#submit" target="_blank" rel="noopener">Сайт літньої школи</a>
+        </div>
+        <div class="prompt-box social-box">
+          <div class="prompt-label">Приклад тексту поста</div>
+          <pre id="socialPostText">Сьогодні на літній школі “Освітні горизонти 2026” зібрав/зібрала свій AI-рюкзак вчителя 🎒
+
+Мій головний інсайт: штучний інтелект не замінює вчителя, а допомагає швидше створювати чернетки уроків, завдань, тестів і візуалів. Найближчим часом хочу спробувати AI для [вкажіть свою ідею: план уроку / тест / постер / диференціація].
+
+Дякую за практичну й натхненну зустріч!
+
+#ОсвітніГоризонти2026 #ІМЗО #Астро #AIдляВчителя #ШІвОсвіті</pre>
+          <div class="prompt-actions"><button class="copy-btn" type="button" data-copy-target="socialPostText">Скопіювати текст поста</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-card">
+        <div class="about-media">
+          <img class="author-photo" src="./assets/hesyk.png" alt="Фото автора — Мирослав Гесик" onerror="this.onerror=null;this.src='./assets/hesyk-placeholder.svg';" />
+         
+        </div>
+        <div class="about-content">
+          <span class="section-kicker">Про автора</span>
+          <h2>Мирослав Гесик</h2>
+          <p class="lead-small">Працівник ЗСУ, вчитель у Військовому ліцеї Національної академії сухопутних військ, м. Шептицький.</p>
+          <p>Мета цієї зустрічі — показати, що штучний інтелект може бути простим, корисним і безпечним інструментом у руках педагога.</p>
+          <div class="social-links" aria-label="Соціальні мережі автора">
+            <a href="https://www.facebook.com/miroslav.gesik/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com/myroslav_hesyk/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@myroslav_hesyk" target="_blank" rel="noopener">TikTok</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lyceum-section" id="lyceum">
+      <div class="lyceum-card">
+        <div class="lyceum-media">
+          <img class="lyceum-photo" src="assets/lyceum-photo-placeholder.jpg" alt="Фото Військового ліцею НАСВ, м. Шептицький" />
+          
+        </div>
+        <div class="lyceum-content">
+          <span class="section-kicker">Вступна кампанія триває</span>
+          <h2>Військовий ліцей НАСВ, м. Шептицький</h2>
+          <p>Запрошуємо мотивованих юнаків і дівчат до навчання у Військовому ліцеї Національної академії сухопутних військ.</p>
+          <div class="benefits-grid">
+            <div><strong>Повне державне забезпечення</strong><span>навчання, проживання та підтримка ліцеїстів.</span></div>
+            <div><strong>Поглиблена англійська</strong><span>посилене вивчення англійської мови.</span></div>
+            <div><strong>Військова справа</strong><span>дисципліна, лідерство, командна робота.</span></div>
+            <div><strong>Безпечна територія</strong><span>організоване проживання на захищеній території.</span></div>
+            <div><strong>2 роки навчання</strong><span>підготовка до свідомого вибору майбутнього.</span></div>
+            <div><strong>Вільний вибір професії</strong><span>майбутня професія може бути військовою або цивільною.</span></div>
+          </div>
+          <a class="primary-btn" href="https://vlnasv.mil.gov.ua/" target="_blank" rel="noopener">Перейти на сайт ліцею</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>AI-рюкзак вчителя</strong> · Штучний інтелект на допомогу вчителю</p>
+    <p>Автор: Мирослав Гесик · #ОсвітніГоризонти2026</p>
+  </footer>
+
+  <dialog class="certificate-dialog" id="certificateDialog">
+    <button class="close-dialog" id="closeDialogBtn" type="button" aria-label="Закрити">×</button>
+    <h2>Вітаємо! Сертифікат відкрито 🎉</h2>
+    <canvas id="certificateCanvas" width="1400" height="990" aria-label="Сертифікат учасника"></canvas>
+    <div class="dialog-actions">
+      <button class="primary-btn" id="downloadCertificateBtn" type="button">Завантажити PNG</button>
+      <a class="secondary-btn" id="bonusCourseLink" href="#" target="_blank" rel="noopener">Перейти до бонусного курсу</a>
+    </div>
+    
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
