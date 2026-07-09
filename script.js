@@ -412,7 +412,7 @@ function drawCertificate() {
 
   ctx.fillStyle = "#17142c";
   ctx.font = "700 25px Inter, Arial";
-  ctx.fillText(`Предмет: ${subject} · ${grade}`, 700, 725);
+  
   ctx.fillText("Літня школа «Освітні горизонти: літо професійного розвитку»", 700, 770);
 
   ctx.fillStyle = "#67627d";
