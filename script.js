@@ -1,4 +1,4 @@
-const BONUS_COURSE_URL = "https://invincible-scowl-05a.notion.site/AI-3704db0e9ebd807692b9fdc7e544e81a?source=copy_link"; // замініть на посилання вашого курсу з 8 уроків
+const BONUS_COURSE_URL = "https://invincible-scowl-05a.notion.site/AI-3b74db0e9ebd80578faec80d944916a2?source=copy_link"; // замініть на посилання вашого курсу з 8 уроків
 const STORAGE_KEY = "aiBackpackTeacherState_v2";
 const TOTAL_STATIONS = 12;
 
@@ -311,8 +311,8 @@ function updateProgressUI() {
   if (certificateBtn) {
     certificateBtn.disabled = completed < TOTAL_STATIONS;
     certificateBtn.textContent = completed < TOTAL_STATIONS
-      ? `Сертифікат відкриється після ${TOTAL_STATIONS} станцій`
-      : "Отримати сертифікат";
+      ? `Бонус відкриється після ${TOTAL_STATIONS} станцій`
+      : "Отримати бонус";
   }
 }
 

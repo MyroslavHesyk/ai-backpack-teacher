@@ -431,3 +431,142 @@ body { word-wrap: break-word; }
   .author-photo, .author-chip { width: min(100%, 210px); }
   .brand strong { font-size: 0.88rem; }
 }
+
+    /* ===== ДОДАТКОВІ СТИЛІ ДЛЯ INTRO ===== */
+    /* Використовуємо ті самі змінні, що й в style.css */
+    .intro-page {
+      background: radial-gradient(circle at bottom left, #fff1c7 0, transparent 40%),
+                  radial-gradient(circle at top right, #dff9ff 0, transparent 40%), var(--bg);
+    }
+    .intro-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      padding: 2rem 0 1rem;
+    }
+    .intro-hero-content h1 {
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      letter-spacing: -0.06em;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+    }
+    .intro-hero-content h1 span {
+      color: var(--primary);
+      position: relative;
+    }
+    .intro-hero-content h1 span::after {
+      content: "";
+      position: absolute;
+      left: 0.05em;
+      right: 0.02em;
+      bottom: 0.06em;
+      height: 0.12em;
+      border-radius: 999px;
+      background: rgba(255, 184, 77, 0.55);
+      z-index: -1;
+    }
+    .intro-hero-image {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--surface);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+    .intro-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .intro-section {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem;
+    }
+    .intro-section h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .intro-section h2 .accent {
+      color: var(--primary);
+    }
+    .intro-section p {
+      font-size: 1.12rem;
+      line-height: 1.8;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+    .intro-section ul, .intro-section ol {
+      padding-left: 1.5rem;
+      color: var(--muted);
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .intro-section ul li, .intro-section ol li {
+      margin-bottom: 0.5rem;
+    }
+    .intro-highlight {
+      background: rgba(103, 87, 255, 0.07);
+      border-left: 5px solid var(--primary);
+      padding: 1.2rem 1.8rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 1.8rem 0;
+    }
+    .intro-highlight strong {
+      color: var(--primary-dark);
+    }
+    .intro-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .intro-grid-2 > div {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+    }
+    .intro-grid-2 h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    .intro-cta {
+      text-align: center;
+      margin: 3rem 0 2rem;
+    }
+    .intro-cta .primary-btn {
+      font-size: 1.2rem;
+      padding: 0.9rem 2.5rem;
+    }
+    .intro-footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 2rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+    @media (max-width: 760px) {
+      .intro-hero {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-top: 1rem;
+      }
+      .intro-hero-image {
+        aspect-ratio: 16/9;
+      }
+      .intro-grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
